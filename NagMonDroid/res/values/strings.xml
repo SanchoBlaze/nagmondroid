@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hello">Welcome to NagMonDroid. Background checking disabled.</string>
+    <string name="app_name">NagMonDroid</string>
+	
+	<string name="status_url">status_url</string>
+	<string name="username">username</string>
+	<string name="password">password</string>
+
+
+    <string name="remote_service_started">NagMonDroid service has started</string>
+    <string name="remote_service_stopped">NagMonDroid service has stopped</string>
+
+    <string name="remote_service_controller">This demonstrates how you can implement persistent services
+        running in a separate process that may be started and stopped as desired.</string>
+
+    <string name="remote_service_binding">This demonstrates how you can connect with a persistent
+        service running in another process.  Use the kill button to see what happens when
+        the process crashes.</string>
+    <string name="remote_service_connected">Connected to NagMonDroid service</string>
+    <string name="remote_service_disconnected">Disconnected from NagMonDroid service</string>
+    <string name="remote_call_failed">Failure calling NagMonDroid service</string>
+<string-array name="interval_name">
+<item>10 Seconds</item>
+<item>30 Seconds</item>
+<item>60 Seconds</item>
+<item>90 Seconds</item>
+<item>3 Minutes</item>
+<item>5 Minutes</item>
+<item>10 Minutes</item>
+<item>30 Minutes</item>
+<item>60 Minutes</item>
+<item>120 Minutes</item>
+<item>3 Hours</item>
+<item>6 Hours</item>
+<item>12 Hours</item>
+<item>24 Hours</item>
+</string-array>
+<string-array name="interval_time">
+<item>10000</item>
+<item>30000</item>
+<item>60000</item>
+<item>90000</item>
+<item>180000</item>
+<item>300000</item>
+<item>600000</item>
+<item>1800000</item>
+<item>3600000</item>
+<item>7200000</item>
+<item>10800000</item>
+<item>21600000</item>
+<item>43200000</item>
+<item>86400000</item>
+</string-array>
+	
+</resources>
