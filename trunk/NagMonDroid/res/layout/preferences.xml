@@ -3,11 +3,12 @@
 	<PreferenceCategory android:title="Settings">
 	<EditTextPreference
 		android:key="@string/status_url"
-		android:title="Nagios URL"
-		android:summary="Url to status.cgi"
-		android:dialogTitle="Please enter url"
-		android:defaultValue="http://"
+		android:title="@string/menu_settings_status_url_title"
+		android:summary="@string/menu_settings_status_url_summary"
+		android:dialogTitle="@string/menu_settings_status_url_dialogTitle"
+		android:defaultValue="@string/menu_settings_status_url_defaultValue"
 	/>
+
 	<EditTextPreference
 		android:key="@string/username"
 		android:title="Nagios Username"
