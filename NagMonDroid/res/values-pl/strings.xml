@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hello">Witamy w NagMonDroid. Praca w tle wyłączona.</string>
+    <string name="app_name">NagMonDroid</string>
+	<string name="menu_settings">Ustawienia</string>
+	<string name="menu_about">O programie</string>
+	<string name="menu_start">Start</string>
+	<string name="menu_stop">Stop</string>
+	<string name="menu_settings_status_url_title">URL Nagiosa</string>
+	<string name="menu_settings_status_url_summary">URL do status.cgi</string>
+	<string name="menu_settings_status_url_dialogTitle">Wprowadź URL</string>
+	<string name="menu_settings_status_url_defaultValue">http://</string>
+	<string name="status_url">url_statusu</string>
+	<string name="username">użytkownik</string>
+	<string name="password">hasło</string>
+
+	<string name="close">Zamknij</string>
+	<string name="first_run_title">Witaj w NagMonDroid</string>
+	<string name="first_run_message">Ustaw Nagios URL za pomocą Menu->Ustawienia.</string>
+	<string name="about_title">NagMonDroid Informacje</string>
+	<string name="about_message">Simon McLaughlin stworzył NagMonDroid</string>
+	<string name="version">wersja</string>
+
+	<string name="background_enabled">Praca w tle włączona</string>
+	<string name="background_disabled">Praca w tle wyłączona</string>
+    <string name="remote_service_started">Usługa NagMonDroid została włączona</string>
+    <string name="remote_service_stopped">Usługa NagMonDroid została wyłączona</string>
+
+    <string name="remote_service_controller">This demonstrates how you can implement persistent services
+        running in a separate process that may be started and stopped as desired.</string>
+
+    <string name="remote_service_binding">This demonstrates how you can connect with a persistent
+        service running in another process.  Use the kill button to see what happens when
+        the process crashes.</string>
+    <string name="remote_service_connected">Podłączono do usługi NagMonDroid</string>
+    <string name="remote_service_disconnected">Rozłączona z usługą NagMonDroid</string>
+    <string name="remote_call_failed">Failure calling NagMonDroid service</string>
+	<string-array name="interval_name">
+		<item>10 sekund</item>
+		<item>30 sekund</item>
+		<item>60 sekund</item>
+		<item>90 sekund</item>
+		<item>3 minuty</item>
+		<item>5 minut</item>
+		<item>10 minut</item>
+		<item>30 minut</item>
+		<item>60 minut</item>
+		<item>120 minut</item>
+		<item>3 godziny</item>
+		<item>6 godzin</item>
+		<item>12 godzin</item>
+		<item>24 godziny</item>
+	</string-array>
+	<string-array name="interval_time">
+		<item>10000</item>
+		<item>30000</item>
+		<item>60000</item>
+		<item>90000</item>
+		<item>180000</item>
+		<item>300000</item>
+		<item>600000</item>
+		<item>1800000</item>
+		<item>3600000</item>
+		<item>7200000</item>
+		<item>10800000</item>
+		<item>21600000</item>
+		<item>43200000</item>
+		<item>86400000</item>
+	</string-array>
+</resources>

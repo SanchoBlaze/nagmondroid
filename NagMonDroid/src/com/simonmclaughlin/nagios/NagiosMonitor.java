@@ -61,9 +61,9 @@ public class NagiosMonitor extends ListActivity {
         // If it's false (the default) then we need to display an alert dialog
         if (first_run) {
                 new AlertDialog.Builder(NagiosMonitor.this)
-                .setTitle("Welcome to NagiosMonitor")
-                .setMessage("Please set the URL to Nagios by pressing Menu->Settings.")
-                .setNeutralButton("Close", new DialogInterface.OnClickListener() {
+                .setTitle(getString(R.string.first_run_title))
+                .setMessage(getString(R.string.first_run_message))
+                .setNeutralButton(getString(R.string.close), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                                 SharedPreferences.Editor editor = app_preferences.edit();
                                         editor.putBoolean("first_run", false);
@@ -75,7 +75,7 @@ public class NagiosMonitor extends ListActivity {
         if(service_started)
         {
         	TextView topMsg = (TextView)this.findViewById( R.id.topmsg );
-        	topMsg.setText("Background checking enabled"); 
+        	topMsg.setText(getString(R.string.background_enabled)); 
         	startService(new Intent(
             "com.simonmclaughlin.nagios.service.REMOTE_SERVICE"));
 	    	SharedPreferences.Editor editor = app_preferences.edit();
@@ -123,12 +123,12 @@ public class NagiosMonitor extends ListActivity {
     {
     	if (item.hasSubMenu() == false)
     	{
-    		if(item.getTitle().equals("Settings"))
+    		if(item.getTitle().equals(getString(R.string.menu_settings)))
     		{
     			Intent i_settings = new Intent(NagiosMonitor.this, Preferences.class);
     			startActivity(i_settings);
     		}
-    		else if(item.getTitle().equals("Start"))
+    		else if(item.getTitle().equals(getString(R.string.menu_start)))
     		{
     			try {
 
@@ -140,7 +140,7 @@ public class NagiosMonitor extends ListActivity {
                         editor.putBoolean("service_started", true);
                         editor.commit();
                         TextView topMsg = (TextView)this.findViewById( R.id.topmsg );
-                    	topMsg.setText("Background checking enabled"); 
+                    	topMsg.setText(getString(R.string.background_enabled)); 
     			    	
     			    }
 
@@ -155,7 +155,7 @@ public class NagiosMonitor extends ListActivity {
 		            mIsBound = true;
 
     		}
-    		else if(item.getTitle().equals("Stop"))
+    		else if(item.getTitle().equals(getString(R.string.menu_stop)))
     		{
     			if (mIsBound) 
     			{
@@ -176,7 +176,7 @@ public class NagiosMonitor extends ListActivity {
 	               
 	                mIsBound = false;
 	                TextView topMsg = (TextView)this.findViewById( R.id.topmsg );
-	                topMsg.setText("Background checking disabled"); 
+	                topMsg.setText(getString(R.string.background_disabled)); 
 	            }
     			try {
 
@@ -195,7 +195,7 @@ public class NagiosMonitor extends ListActivity {
     			    Log.e("Stop", "ui creation problem", e);
     			  }
     		}
-    		else if(item.getTitle().equals("About"))
+    		else if(item.getTitle().equals(getString(R.string.menu_about)))
     		{
     			 PackageManager pm = getPackageManager();
     		            //---get the package info---
@@ -207,9 +207,9 @@ public class NagiosMonitor extends ListActivity {
 						}
 
     			new AlertDialog.Builder(NagiosMonitor.this)
-                .setTitle("About NagMonDroid")
-                .setMessage("NagMonDroid is written by Simon McLaughlin (http://www.simonmclaughlin.co.uk)\nVersion: "+pi.versionName)
-                .setNeutralButton("Close", new DialogInterface.OnClickListener() {
+                .setTitle(getString(R.string.about_title))
+                .setMessage(getString(R.string.about_message)+" (http://www.simonmclaughlin.co.uk)\n"+getString(R.string.version)+": "+pi.versionName)
+                .setNeutralButton(getString(R.string.close), new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                                 SharedPreferences.Editor editor = app_preferences.edit();
                                         editor.putBoolean("first_run", false);
