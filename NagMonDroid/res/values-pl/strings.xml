@@ -44,18 +44,30 @@
 	<string name="about_title">NagMonDroid Informacje</string>
 	<string name="about_message">Simon McLaughlin stworzył NagMonDroid</string>
 	<string name="version">wersja</string>
+	
+	<string name="all_ok">Everything is OK</string>
+	<string name="yay">Yay!!</string>
+	<string name="all_good">It's all good :)</string>
+	
+	<string name="notification_critical_service">critical service</string>
+	<string name="notification_critical_services">critical services</string>
+	
+	<string name="notification_warning_service">warning service</string>
+	<string name="notification_warning_services">warning services</string>
+	
+	<string name="notification_unknown_service">unknown service</string>
+	<string name="notification_unknown_services">unknown services</string>
+	
+	<string name="notification_ok_service">ok service</string>
+	<string name="notification_ok_services">ok services</string>
+	
+	<string name="link_text">View Extended Information</string>
 
 	<string name="background_enabled">Praca w tle włączona</string>
 	<string name="background_disabled">Praca w tle wyłączona</string>
     <string name="remote_service_started">Usługa NagMonDroid została włączona</string>
     <string name="remote_service_stopped">Usługa NagMonDroid została wyłączona</string>
 
-    <string name="remote_service_controller">This demonstrates how you can implement persistent services
-        running in a separate process that may be started and stopped as desired.</string>
-
-    <string name="remote_service_binding">This demonstrates how you can connect with a persistent
-        service running in another process.  Use the kill button to see what happens when
-        the process crashes.</string>
     <string name="remote_service_connected">Podłączono do usługi NagMonDroid</string>
     <string name="remote_service_disconnected">Rozłączona z usługą NagMonDroid</string>
     <string name="remote_call_failed">Nieudane połączenie z NagMonDroid</string>
