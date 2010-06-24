@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <string name="hello">Witamy w NagMonDroid. Praca w tle wyłączona.</string>
     <string name="app_name">NagMonDroid</string>
 	<string name="menu_settings">Ustawienia</string>
 	<string name="menu_about">O programie</string>
 	<string name="menu_start">Start</string>
 	<string name="menu_stop">Stop</string>
+	
 	<string name="menu_settings_status_url_title">URL Nagiosa</string>
 	<string name="menu_settings_status_url_summary">URL do status.cgi</string>
 	<string name="menu_settings_status_url_dialogTitle">Wprowadź URL</string>
 	<string name="menu_settings_status_url_defaultValue">http://</string>
+		
+	<string name="menu_settings_username_title">Nagios Username</string>
+	<string name="menu_settings_username_summary">Username to access nagios (optional)</string>
+	<string name="menu_settings_username_dialogTitle">Please enter your username</string>
+	
+	<string name="menu_settings_password_title">Nagios Password</string>
+	<string name="menu_settings_password_summary">Password to access nagios (optional)</string>
+	<string name="menu_settings_password_dialogTitle">Please enter your password</string>
+
+	<string name="menu_settings_interval_title">Update Interval</string>
+	<string name="menu_settings_interval_summary">NagMonDroid must be stopped and re-started for this to take affect</string>
+	<string name="menu_settings_interval_dialogTitle">Please choose an interval</string>
+	
+	<string name="menu_settings_display_ok_title">Display OK</string>
+	<string name="menu_settings_display_ok_summary">Display OK status services</string>
+	
+	<string name="menu_settings_hide_disabled_title">Hide disabled</string>
+	<string name="menu_settings_hide_disabled_summary">Hide services that have notifications disabled</string>
+	
+	<string name="menu_settings_vibrate_title">Vibrate</string>
+	<string name="menu_settings_vibrate_summary">Vibrate on status update</string>
+	
 	<string name="status_url">url_statusu</string>
 	<string name="username">użytkownik</string>
 	<string name="password">hasło</string>

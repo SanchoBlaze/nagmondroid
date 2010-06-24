@@ -7,10 +7,33 @@
 	<string name="menu_about">About</string>
 	<string name="menu_start">Start</string>
 	<string name="menu_stop">Stop</string>
+	
 	<string name="menu_settings_status_url_title">Nagios URL</string>
 	<string name="menu_settings_status_url_summary">Url to status.cgi</string>
 	<string name="menu_settings_status_url_dialogTitle">Please enter url</string>
 	<string name="menu_settings_status_url_defaultValue">http://</string>
+	
+	<string name="menu_settings_username_title">Nagios Username</string>
+	<string name="menu_settings_username_summary">Username to access nagios (optional)</string>
+	<string name="menu_settings_username_dialogTitle">Please enter your username</string>
+	
+	<string name="menu_settings_password_title">Nagios Password</string>
+	<string name="menu_settings_password_summary">Password to access nagios (optional)</string>
+	<string name="menu_settings_password_dialogTitle">Please enter your password</string>
+
+	<string name="menu_settings_interval_title">Update Interval</string>
+	<string name="menu_settings_interval_summary">NagMonDroid must be stopped and re-started for this to take affect</string>
+	<string name="menu_settings_interval_dialogTitle">Please choose an interval</string>
+	
+	<string name="menu_settings_display_ok_title">Display OK</string>
+	<string name="menu_settings_display_ok_summary">Display OK status services</string>
+	
+	<string name="menu_settings_hide_disabled_title">Hide disabled</string>
+	<string name="menu_settings_hide_disabled_summary">Hide services that have notifications disabled</string>
+	
+	<string name="menu_settings_vibrate_title">Vibrate</string>
+	<string name="menu_settings_vibrate_summary">Vibrate on status update</string>
+	
 	<string name="status_url">status_url</string>
 	<string name="username">username</string>
 	<string name="password">password</string>
