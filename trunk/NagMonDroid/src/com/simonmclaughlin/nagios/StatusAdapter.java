@@ -57,7 +57,7 @@ public class StatusAdapter extends BaseAdapter {
 		if( serviceView != null )
 			serviceView.setText( Uri.decode(status.getService().replace("+", " ")) );
 		TextView urlView = (TextView)v.findViewById( R.id.url );
-		SpannableString str = SpannableString.valueOf("View Extended Information"); 
+		SpannableString str = SpannableString.valueOf(context.getString(R.string.link_text)); 
 		str.setSpan(new URLSpan(status.getNagios()), 0, 25, Spannable.SPAN_INCLUSIVE_EXCLUSIVE); 
 		urlView.append(str); 
 		addLinkMovementMethod(urlView);

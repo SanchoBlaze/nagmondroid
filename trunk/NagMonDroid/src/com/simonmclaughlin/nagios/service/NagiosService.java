@@ -159,7 +159,6 @@ public class NagiosService extends Service {
                     final int N = mCallbacks.beginBroadcast();
                     for (int i=0; i<N; i++) {
                         try {
-                        	//Log.i("WANK", "SENDING DATA");
                             mCallbacks.getBroadcastItem(i).valueChanged(data);
                         } catch (RemoteException e) {
                             // The RemoteCallbackList will take care of removing
@@ -170,15 +169,6 @@ public class NagiosService extends Service {
 
                     // Repeat every 1 second.
                     sendMessageDelayed(obtainMessage(REPORT_MSG), 1000);
-                    /*if(service_start)
-                    {
-                    	sendMessageDelayed(obtainMessage(REPORT_MSG), interval_time+10000);
-                    }
-                    else
-                    {
-                    	sendMessageDelayed(obtainMessage(REPORT_MSG), 10000);
-                    	service_start = true;
-                    }*/
                 } break;
                 default:
                     super.handleMessage(msg);
@@ -245,9 +235,7 @@ public class NagiosService extends Service {
 	    {
 	    	url += "&servicestatustypes=28&hoststatustypes=15&serviceprops=0&hostprops=0";
 	    }
-	    
-	    //Log.i("WANK-url", url);
-	    
+	    	    
 	    final HttpUriRequest request = new HttpGet(url);
 	    Runnable httpRunnable = new Runnable() {
 	      public void run() {
@@ -281,7 +269,7 @@ public class NagiosService extends Service {
 	                  String serviceDetails = null;
 	                  
 	                  Pattern Regex = Pattern.compile("<td align=left valign=center class='status(.*?)'><a href='extinfo\\.cgi\\?type=1&host=(.*?)' .+>(.*?)</a></td>", Pattern.CASE_INSENSITIVE);
-	                  Matcher RegexMatcher = Regex.matcher(sb.toString().toLowerCase());
+	                  Matcher RegexMatcher = Regex.matcher(sb.toString());
 	                  data = "<nagios>";
 	                  while (RegexMatcher.find()) 
 	                  {
@@ -290,7 +278,7 @@ public class NagiosService extends Service {
 	                	  
 	                	  hostDisabled = false;
 	                	  Pattern Regex1 = Pattern.compile("<A HREF='extinfo\\.cgi\\?type=1&host="+hostName+"'><IMG", Pattern.CASE_INSENSITIVE);
-	                	  Matcher RegexMatcher1 = Regex1.matcher(sb.toString().toLowerCase());
+	                	  Matcher RegexMatcher1 = Regex1.matcher(sb.toString());
 	                	  if (RegexMatcher1.find()) 
 	                	  {
 	                		  hostDisabled = true;
@@ -299,7 +287,7 @@ public class NagiosService extends Service {
 	                	  if(!hostDisabled || !hidedisabled)
 	                	  {
 	                		  Pattern Regex2 = Pattern.compile("<A HREF='extinfo\\.cgi\\?type=2&host="+hostName+"&service=.*?'>(.*?)</A></TD></TR>.*?<td></td>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
-	                		  Matcher RegexMatcher2 = Regex2.matcher(sb.toString().toLowerCase());
+	                		  Matcher RegexMatcher2 = Regex2.matcher(sb.toString());
 	                		  while(RegexMatcher2.find()) 
 	                		  {
 	                			  serviceDisabled = false;
@@ -345,9 +333,7 @@ public class NagiosService extends Service {
 		                				  }
 		                				  tempCount++;
 		                			  } 
-		                			  data += "<problem><host>"+hostName+"</host><service>"+serviceName+"</service><level>"+serviceStatus+"</level><info>"+Html.fromHtml(serviceDetails)+"</info><nagios>"+status_url+"</nagios></problem>";
-		                			  //data += "<problem><host>"+hostName+"</host><service>"+serviceName+"</service><level>"+serviceStatus+"</level><info>"+serviceDetails+"</info><nagios>"+status_url+"</nagios></problem>";
-		                			  //Log.i("WANK","<problem><host>"+hostName+"</host><service>"+serviceName+"</service><level>"+serviceStatus+"</level><info>"+serviceDetails+"</info><nagios>"+status_url+"</nagios></problem>");
+		                			  data += "<problem><host>"+hostName+"</host><service>"+serviceName+"</service><level>"+serviceStatus+"</level><info>"+Html.fromHtml(serviceDetails)+"</info><nagios>"+status_url+"</nagios></problem>";		                			 
 		                			  count++;
 			                	  }
 	                		  }
@@ -357,7 +343,7 @@ public class NagiosService extends Service {
 	                  }               
 	                  if(data.equals("<nagios>"))
 	                  {
-	                	  data += "<problem><host>Everything is OK</host><service>Yay!!</service><level>ok</level><info>It's all good :)</info><nagios>"+status_url+"</nagios></problem>"; 
+	                	  data += "<problem><host>"+getString(R.string.all_ok)+"</host><service>"+getString(R.string.yay)+"</service><level>ok</level><info>"+getString(R.string.all_good)+"</info><nagios>"+status_url+"</nagios></problem>"; 
 	                  }
 	                  data += "</nagios>";
 	                  String msg = "";
@@ -366,11 +352,11 @@ public class NagiosService extends Service {
 	                  {
 		                  if(criticalCount == 1)
 		                  {
-		                	  msg += criticalCount+" critical service ";
+		                	  msg += criticalCount+" "+getString(R.string.notification_critical_service)+" ";
 		                  }
 		                  else
 		                  {
-		                	  msg += criticalCount+" critical services ";
+		                	  msg += criticalCount+" "+getString(R.string.notification_critical_services)+" ";
 		                  }
 	                  }
 	                  
@@ -378,11 +364,11 @@ public class NagiosService extends Service {
 	                  {
 		                  if(warningCount == 1)
 		                  {
-		                	  msg += warningCount+" warning service ";
+		                	  msg += warningCount+" "+getString(R.string.notification_warning_service)+" ";
 		                  }
 		                  else
 		                  {
-		                	  msg += warningCount+" warning services ";
+		                	  msg += warningCount+" "+getString(R.string.notification_warning_services)+" ";
 		                  }
 	                  }
 	                  
@@ -390,11 +376,11 @@ public class NagiosService extends Service {
 	                  {
 		                  if(unknownCount == 1)
 		                  {
-		                	  msg += unknownCount+" unknown service ";
+		                	  msg += unknownCount+" "+getString(R.string.notification_unknown_service)+" ";
 		                  }
 		                  else
 		                  {
-		                	  msg += unknownCount+" unknown services ";
+		                	  msg += unknownCount+" "+getString(R.string.notification_unknown_services)+" ";
 		                  }
 	                  }
 	                  
@@ -402,11 +388,11 @@ public class NagiosService extends Service {
 	                  {
 		                  if(okCount == 1)
 		                  {
-		                	  msg += okCount+" ok service ";
+		                	  msg += okCount+" "+getString(R.string.notification_ok_service)+" ";
 		                  }
 		                  else
 		                  {
-		                	  msg += okCount+" ok services ";
+		                	  msg += okCount+" "+getString(R.string.notification_ok_services)+" ";
 		                  }
 	                  }
 	                	          
@@ -436,72 +422,3 @@ public class NagiosService extends Service {
 	    return true;
 	  }
 }
-
-/*
-Pattern Regex = Pattern.compile(" align=left valign=center class='status(\\w+?)'>(<a href='extinfo\\.cgi\\?.*?&service=(.*?)'>.*?</a>).*?<td class='status.*?' valign='center'>(.*?)&nbsp;</td>",
-		Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
-Matcher RegexMatcher = Regex.matcher(sb.toString().toLowerCase());
-data = "<nagios>";
-	while (RegexMatcher.find()) {
-		boolean FoundMatch = false;
-		
-			Pattern Regex2 = Pattern.compile("ndisabled");
-			Matcher RegexMatcher2 = Regex2.matcher(RegexMatcher.group(0));
-			FoundMatch = RegexMatcher2.find();
-			Log.i("WANK-disabled", "Found:"+FoundMatch);
-		if(!FoundMatch || !hidedisabled)
-		{
-			
-			
-			Pattern Regex3 = Pattern.compile("host=(.*?)&");
-			Matcher RegexMatcher3 = Regex3.matcher(RegexMatcher.group(0));
-			if (RegexMatcher3.find()) 
-			{
-				hostName = RegexMatcher3.group(1);
-			} 
-			Log.i("WANK-hostname", hostName);
-			Pattern Regex4 = Pattern.compile("service=(.*?)'");
-			Matcher RegexMatcher4 = Regex4.matcher(RegexMatcher.group(2));
-			if (RegexMatcher4.find()) 
-			{
-				serviceName = RegexMatcher4.group(1);
-			} 
-			Log.i("WANK-serviceName", serviceName);
-			count++;
-			String level = RegexMatcher.group(1);
-			Log.i("WANK-level-start", level);
-			if(level.endsWith("ack"))
-			{
-				level = level.substring(2, level.length()-3);
-			}
-			else if(level.equalsIgnoreCase("even"))
-			{
-				level = "OK";
-			}
-			else if(level.equalsIgnoreCase("odd"))
-			{
-				level = "OK";
-			}
-			else if(level.equalsIgnoreCase("hostdown"))
-			{
-				level = "critical";
-			}
-			else
-			{
-				level = level.substring(2, level.length());
-			}
-			Log.i("WANK-level-end", level);
-			boolean showRow = true;
-			
-			if(!displayok && level.equalsIgnoreCase("OK"))
-			{
-				showRow = false;
-			}
-			
-			if(showRow)
-			{
-				data += "<problem><host>"+hostName+"</host><service>"+serviceName+"</service><level>"+level+"</level><info>"+RegexMatcher.group(4)+"</info><nagios>"+status_url+"</nagios></problem>";
-			}
-			//Log.i("WANK", "<problem><host>"+hostName+"</host><service>"+serviceName+"</service><level>"+level+"</level><info>"+Html.fromHtml(RegexMatcher.group(4))+"</info></problem>");
-		}
-	}*/	   
