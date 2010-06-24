@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\Ubuntu Backup\\sancho\\workspace\\NagiosMonitor\\src\\com\\simonmclaughlin\\nagios\\service\\IRemoteService.aidl
+ * Original file: /home/sancho/SVN/nagmondroid/NagMonDroid/src/com/simonmclaughlin/nagios/service/IRemoteService.aidl
  */
 package com.simonmclaughlin.nagios.service;
 import java.lang.String;

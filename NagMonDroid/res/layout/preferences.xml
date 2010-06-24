@@ -11,44 +11,44 @@
 
 	<EditTextPreference
 		android:key="@string/username"
-		android:title="Nagios Username"
-		android:summary="Username to access nagios (optional)"
-		android:dialogTitle="Please enter your username"
+		android:title="@string/menu_settings_username_title"
+		android:summary="@string/menu_settings_username_summary"
+		android:dialogTitle="@string/menu_settings_username_dialogTitle"
 	/>
 	<EditTextPreference
 		android:key="@string/password"
-		android:title="Nagios Password"
-		android:summary="Password to access nagios (optional)"
-		android:dialogTitle="Please enter your password"
+		android:title="@string/menu_settings_password_title"
+		android:summary="@string/menu_settings_password_summary"
+		android:dialogTitle="@string/menu_settings_password_dialogTitle"
 		android:password="true"
 	/>
 	 <ListPreference
 		android:key="interval"
-		android:title="Update Interval"
-		android:summary="NagMonDroid must be stopped and re-started for this to take affect"
+		android:title="@string/menu_settings_interval_title"
+		android:summary="@string/menu_settings_interval_summary"
 		android:entries="@array/interval_name"
 		android:entryValues="@array/interval_time"
-		android:dialogTitle="Please choose an interval"
+		android:dialogTitle="@string/menu_settings_interval_dialogTitle"
 		android:defaultValue="90000" 
 	/>
 	</PreferenceCategory>
     <PreferenceCategory android:title="Preferences">
 	<CheckBoxPreference  
          android:key="displayok"  
-         android:title="Display OK"  
-         android:summary="Display OK status services"
+         android:title="@string/menu_settings_display_ok_title"  
+         android:summary="@string/menu_settings_display_ok_summary"
          android:defaultValue="false"
     />
     <CheckBoxPreference  
          android:key="hidedisabled"  
-         android:title="Hide disabled"  
-         android:summary="Hide services that have notifications disabled"
+         android:title="@string/menu_settings_hide_disabled_title"  
+         android:summary="@string/menu_settings_hide_disabled_summary"
          android:defaultValue="true"
     />
 	<CheckBoxPreference  
          android:key="vibrate"  
-         android:title="Vibrate"  
-         android:summary="Vibrate on status update" 
+         android:title="@string/menu_settings_vibrate_title"  
+         android:summary="@string/menu_settings_vibrate_summary" 
     />
     
     </PreferenceCategory>
