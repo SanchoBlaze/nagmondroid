@@ -13,26 +13,26 @@
 	<string name="menu_settings_status_url_dialogTitle">Wprowadź URL</string>
 	<string name="menu_settings_status_url_defaultValue">http://</string>
 		
-	<string name="menu_settings_username_title">Nagios Username</string>
-	<string name="menu_settings_username_summary">Username to access nagios (optional)</string>
-	<string name="menu_settings_username_dialogTitle">Please enter your username</string>
+	<string name="menu_settings_username_title">Użytkownik Nagios</string>
+	<string name="menu_settings_username_summary">Użytkownik, który ma dostęp do nagiosa (opcjonalnie)</string>
+	<string name="menu_settings_username_dialogTitle">Proszę wprowadzić nazwę użytkownika</string>
 	
-	<string name="menu_settings_password_title">Nagios Password</string>
-	<string name="menu_settings_password_summary">Password to access nagios (optional)</string>
-	<string name="menu_settings_password_dialogTitle">Please enter your password</string>
+	<string name="menu_settings_password_title">Hasło Nagios</string>
+	<string name="menu_settings_password_summary">Hasło dostępu do Nagiosa (opcjonalnie)</string>
+	<string name="menu_settings_password_dialogTitle">Proszę wprowadzić hasło</string>
 
-	<string name="menu_settings_interval_title">Update Interval</string>
-	<string name="menu_settings_interval_summary">NagMonDroid must be stopped and re-started for this to take affect</string>
-	<string name="menu_settings_interval_dialogTitle">Please choose an interval</string>
+	<string name="menu_settings_interval_title">Interwał przetwarzania</string>
+	<string name="menu_settings_interval_summary">NagMonDroid musi zostać zatrzymany i uruchomiony ponownie aby uaktywnić tę opcję</string>
+	<string name="menu_settings_interval_dialogTitle">Proszę wybrać interwał</string>
 	
-	<string name="menu_settings_display_ok_title">Display OK</string>
-	<string name="menu_settings_display_ok_summary">Display OK status services</string>
+	<string name="menu_settings_display_ok_title">Wyświetlaj "OK"</string>
+	<string name="menu_settings_display_ok_summary">Wyświetlaj usługi ze statusem "OK"</string>
+
+	<string name="menu_settings_hide_disabled_title">Ukryj wyłączone</string>
+	<string name="menu_settings_hide_disabled_summary">Ukryj usługi które mają wyłączone powiadomienia</string>
 	
-	<string name="menu_settings_hide_disabled_title">Hide disabled</string>
-	<string name="menu_settings_hide_disabled_summary">Hide services that have notifications disabled</string>
-	
-	<string name="menu_settings_vibrate_title">Vibrate</string>
-	<string name="menu_settings_vibrate_summary">Vibrate on status update</string>
+	<string name="menu_settings_vibrate_title">Wibracja</string>
+	<string name="menu_settings_vibrate_summary">Wibracja po zmianie statusu</string>
 	
 	<string name="status_url">url_statusu</string>
 	<string name="username">użytkownik</string>
@@ -58,7 +58,7 @@
         the process crashes.</string>
     <string name="remote_service_connected">Podłączono do usługi NagMonDroid</string>
     <string name="remote_service_disconnected">Rozłączona z usługą NagMonDroid</string>
-    <string name="remote_call_failed">Failure calling NagMonDroid service</string>
+    <string name="remote_call_failed">Nieudane połączenie z NagMonDroid</string>
 	<string-array name="interval_name">
 		<item>10 sekund</item>
 		<item>30 sekund</item>
