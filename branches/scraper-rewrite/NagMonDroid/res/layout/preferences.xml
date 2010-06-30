@@ -1,0 +1,55 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Settings">
+	<EditTextPreference
+		android:key="@string/status_url"
+		android:title="@string/menu_settings_status_url_title"
+		android:summary="@string/menu_settings_status_url_summary"
+		android:dialogTitle="@string/menu_settings_status_url_dialogTitle"
+		android:defaultValue="@string/menu_settings_status_url_defaultValue"
+	/>
+
+	<EditTextPreference
+		android:key="@string/username"
+		android:title="@string/menu_settings_username_title"
+		android:summary="@string/menu_settings_username_summary"
+		android:dialogTitle="@string/menu_settings_username_dialogTitle"
+	/>
+	<EditTextPreference
+		android:key="@string/password"
+		android:title="@string/menu_settings_password_title"
+		android:summary="@string/menu_settings_password_summary"
+		android:dialogTitle="@string/menu_settings_password_dialogTitle"
+		android:password="true"
+	/>
+	 <ListPreference
+		android:key="interval"
+		android:title="@string/menu_settings_interval_title"
+		android:summary="@string/menu_settings_interval_summary"
+		android:entries="@array/interval_name"
+		android:entryValues="@array/interval_time"
+		android:dialogTitle="@string/menu_settings_interval_dialogTitle"
+		android:defaultValue="90000" 
+	/>
+	</PreferenceCategory>
+    <PreferenceCategory android:title="Preferences">
+	<CheckBoxPreference  
+         android:key="displayok"  
+         android:title="@string/menu_settings_display_ok_title"  
+         android:summary="@string/menu_settings_display_ok_summary"
+         android:defaultValue="false"
+    />
+    <CheckBoxPreference  
+         android:key="hidedisabled"  
+         android:title="@string/menu_settings_hide_disabled_title"  
+         android:summary="@string/menu_settings_hide_disabled_summary"
+         android:defaultValue="true"
+    />
+	<CheckBoxPreference  
+         android:key="vibrate"  
+         android:title="@string/menu_settings_vibrate_title"  
+         android:summary="@string/menu_settings_vibrate_summary" 
+    />
+    
+    </PreferenceCategory>
+</PreferenceScreen>
