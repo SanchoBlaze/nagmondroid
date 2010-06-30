@@ -45,23 +45,23 @@
 	<string name="about_message">Simon McLaughlin stworzył NagMonDroid</string>
 	<string name="version">wersja</string>
 	
-	<string name="all_ok">Everything is OK</string>
-	<string name="yay">Yay!!</string>
-	<string name="all_good">It's all good :)</string>
+	<string name="all_ok">Wszystko OK</string>
+	<string name="yay">Hura!!</string>
+	<string name="all_good">Wszystko wporządku :)</string>
 	
-	<string name="notification_critical_service">critical service</string>
-	<string name="notification_critical_services">critical services</string>
+	<string name="notification_critical_service">krytyczna usługa</string>
+	<string name="notification_critical_services">krytyczn(e|ych) usług(i)</string>
 	
-	<string name="notification_warning_service">warning service</string>
-	<string name="notification_warning_services">warning services</string>
+	<string name="notification_warning_service">ostrzeżenie usługi</string>
+	<string name="notification_warning_services">ostrzeże(ń|nia) usług</string>
 	
-	<string name="notification_unknown_service">unknown service</string>
-	<string name="notification_unknown_services">unknown services</string>
+	<string name="notification_unknown_service">nieznana usługa</string>
+	<string name="notification_unknown_services">nieznan(e|ych) usług(i)</string>
 	
-	<string name="notification_ok_service">ok service</string>
-	<string name="notification_ok_services">ok services</string>
+	<string name="notification_ok_service">Usługa OK</string>
+	<string name="notification_ok_services">Usługi OK</string>
 	
-	<string name="link_text">View Extended Information</string>
+	<string name="link_text">Zobacz więcej informacji</string>
 
 	<string name="background_enabled">Praca w tle włączona</string>
 	<string name="background_disabled">Praca w tle wyłączona</string>
