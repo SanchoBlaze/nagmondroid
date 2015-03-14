@@ -1,0 +1,1 @@
+If you would like to see NagMonDroid in your language, please help us by submitting a translation of http://code.google.com/p/nagmondroid/source/browse/trunk/NagMonDroid/res/values/strings.xml
